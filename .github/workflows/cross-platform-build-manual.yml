@@ -134,7 +134,7 @@ jobs:
             export CXXFLAGS_arm_unknown_linux_gnueabihf="-march=armv6 -mfpu=vfp -mfloat-abi=hard"
             export CARGO_TARGET_ARM_UNKNOWN_LINUX_GNUEABIHF_RUSTFLAGS="-C target-feature=-neon"
           fi
-          FEATURES="channel-matrix,channel-lark"
+          FEATURES="channel-matrix,channel-lark,whatsapp-web"
           if [ "${{ matrix.skip_prometheus || 'false' }}" = "true" ]; then
             cargo build --release --locked --no-default-features --features "agent-runtime,schema-export,${FEATURES}" --target ${{ matrix.target }}
           else
