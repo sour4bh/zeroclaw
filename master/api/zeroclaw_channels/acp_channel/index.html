@@ -22,8 +22,8 @@ property keys use <strong>camelCase</strong> (<code>sessionId</code>, <code>tool
 <code>sessionUpdate</code>, <code>oldText</code>, <code>newText</code>, …), and string values carried by
 discriminator fields use <strong>snake_case</strong> (<code>agent_message_chunk</code>,
 <code>allow_once</code>, <code>reject_with_edit</code>, …). The JSON-RPC envelope follows the
-2.0 spec and is constructed by [<code>zeroclaw_api::jsonrpc</code>] using the
-shared [<code>JSONRPC_VERSION</code>][zeroclaw_api::jsonrpc::JSONRPC_VERSION]
+2.0 spec and is constructed by <a href="../../zeroclaw_api/jsonrpc/index.html" title="mod zeroclaw_api::jsonrpc"><code>zeroclaw_api::jsonrpc</code></a> using the
+shared <a href="../../zeroclaw_api/jsonrpc/constant.JSONRPC_VERSION.html" title="constant zeroclaw_api::jsonrpc::JSONRPC_VERSION"><code>JSONRPC_VERSION</code></a>
 constant. Do <strong>not</strong> snake_case-rewrite these property keys: the
 upstream ACP spec is the contract these IDE clients (Zed, Toad, …)
 parse against, and divergence breaks them.</p>
